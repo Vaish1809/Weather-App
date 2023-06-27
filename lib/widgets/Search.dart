@@ -38,7 +38,9 @@ class __SearchClassState extends State<SearchClass> {
                   child: Container(
                     padding: EdgeInsets.all(18),
                     child: TextField(
-                      style:  TextStyle(fontSize: 26,),
+                      style: TextStyle(
+                        fontSize: 26,
+                      ),
                       controller: controller,
                       decoration: InputDecoration(
                         hintText: "Search City",
@@ -68,8 +70,11 @@ class __SearchClassState extends State<SearchClass> {
                       },
                       style: const ButtonStyle(
                           minimumSize: MaterialStatePropertyAll(Size(60, 45))),
-                      child: const Text("Go",style: TextStyle(color: Color.fromARGB(255, 199, 229, 244)
-                     ,fontSize: 18 ),
+                      child: const Text(
+                        "Go",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 199, 229, 244),
+                            fontSize: 18),
                       ),
                     ),
                   ),
@@ -78,7 +83,7 @@ class __SearchClassState extends State<SearchClass> {
             ),
           ),
           const SizedBox(
-            height: 50,
+            height: 70,
           ),
           Container(
             alignment: Alignment.center,
@@ -97,10 +102,9 @@ class __SearchClassState extends State<SearchClass> {
             style: const TextStyle(fontSize: 15),
           ),
           const SizedBox(
-            height: 100,
+            height: 150,
           ),
           Container(
-            padding: const EdgeInsets.only(left: 18, right: 18),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -120,8 +124,10 @@ class __SearchClassState extends State<SearchClass> {
                   ),
                 ]),
                 Column(children: [
-                  const Text("Temp",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Center(
+                    child: Text("Temperature",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
                   const SizedBox(
                     height: 8,
                   ),
@@ -148,7 +154,6 @@ class __SearchClassState extends State<SearchClass> {
             height: 70,
           ),
           Container(
-            padding: const EdgeInsets.only(left: 18, right: 18),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -168,8 +173,10 @@ class __SearchClassState extends State<SearchClass> {
                   ),
                 ]),
                 Column(children: [
-                  const Text("Pressure",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Center(
+                    child: Text("Pressure",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
                   const SizedBox(
                     height: 8,
                   ),
