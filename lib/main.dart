@@ -4,12 +4,14 @@ import 'package:weather_app/widgets/Search.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  //WidgetsFlutterBinding.ensureInitialized();
   
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-  //runApp(DefaultTextStyle(style: GoogleFonts.ubuntu(), child:const  MyApp(
-  runApp(MyApp());
-  //)));
+ 
+  runApp(const MyApp());
+ 
+
 }
 
 class MyApp extends StatefulWidget {
@@ -23,12 +25,20 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(),
+      
+            theme: ThemeData.dark().copyWith(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color.fromARGB(27, 128, 128, 128),brightness: Brightness.dark
+          
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-            title: const Text("MyWeather"),
-            backgroundColor: Color.fromARGB(255, 0, 0, 0)),
+            title:  Text("MyWeather",
+          style: GoogleFonts.getFont("Pacifico"), ),
+            backgroundColor:const  Color.fromARGB(255, 0, 0, 0)),
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         body: Stack(
           children: [
@@ -37,7 +47,7 @@ class _MyAppState extends State<MyApp> {
                 image: DecorationImage(
                     image: AssetImage("assets/wallpaper.jpg"),
                     fit: BoxFit.contain,
-                    opacity: 0.30),
+                    opacity: 0.50),
               ),
             ),
             SearchClass(),

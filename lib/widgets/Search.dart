@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:weather_app/model/datamodel.dart';
 import 'package:weather_app/repo.dart';
@@ -35,9 +36,9 @@ class __SearchClassState extends State<SearchClass> {
               children: [
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(18),
+                    padding: EdgeInsets.all(18),
                     child: TextField(
-                      style: const TextStyle(fontSize: 26),
+                      style:  TextStyle(fontSize: 26,),
                       controller: controller,
                       decoration: InputDecoration(
                         hintText: "Search City",
@@ -67,7 +68,9 @@ class __SearchClassState extends State<SearchClass> {
                       },
                       style: const ButtonStyle(
                           minimumSize: MaterialStatePropertyAll(Size(60, 45))),
-                      child: const Text("Go"),
+                      child: const Text("Go",style: TextStyle(color: Color.fromARGB(255, 199, 229, 244)
+                     ,fontSize: 18 ),
+                      ),
                     ),
                   ),
                 ),
