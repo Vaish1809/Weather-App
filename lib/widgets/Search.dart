@@ -38,7 +38,9 @@ class __SearchClassState extends State<SearchClass> {
                   child: Container(
                     padding: EdgeInsets.all(18),
                     child: TextField(
-                      style:  TextStyle(fontSize: 26,),
+                      style: TextStyle(
+                        fontSize: 26,
+                      ),
                       controller: controller,
                       decoration: InputDecoration(
                         hintText: "Search City",
@@ -68,8 +70,11 @@ class __SearchClassState extends State<SearchClass> {
                       },
                       style: const ButtonStyle(
                           minimumSize: MaterialStatePropertyAll(Size(60, 45))),
-                      child: const Text("Go",style: TextStyle(color: Color.fromARGB(255, 199, 229, 244)
-                     ,fontSize: 18 ),
+                      child: const Text(
+                        "Go",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 199, 229, 244),
+                            fontSize: 18),
                       ),
                     ),
                   ),
@@ -99,45 +104,43 @@ class __SearchClassState extends State<SearchClass> {
           const SizedBox(
             height: 150,
           ),
-         // Container(
-           //
-           // padding: const EdgeInsets.only(left: 18, right: 18),
-            //child: 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Expanded(
-                  child: Column(children: [
-                    const Text(
-                      "Latitude",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+          
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: Column(children: [
+                  const Text(
+                    "Latitude",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "${weatherModel?.coord?.lat}",
-                      style: const TextStyle(fontSize: 18),
-                    ),
-                  ]),
-                ),
-                Expanded(
-                  child: Column(children: [
-                    const Text("Temp",
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "${weatherModel?.main?.temp}",
-                      style: const TextStyle(fontSize: 18),
-                    ),
-                  ]),
-                ),
-                Expanded(
-                  child: Column(children: [
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "${weatherModel?.coord?.lat}",
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ]),
+              ),
+              Expanded(
+                child: Column(children: [
+                  const Text("Temp",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "${weatherModel?.main?.temp}",
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ]),
+              ),
+              Expanded(
+                child: Column(
+                  children: [
                     const Text("Longitude",
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     const SizedBox(
@@ -148,66 +151,64 @@ class __SearchClassState extends State<SearchClass> {
                       style: const TextStyle(fontSize: 18),
                     ),
                   ],
-                  ),
-                )
-              ],
-            ),
-         // ),
+                ),
+              )
+            ],
+          ),
+          // ),
           const SizedBox(
             height: 70,
           ),
-          // Container(
-          //   padding: const EdgeInsets.only(left: 18, right: 18),
-          //   child: 
-            Row(
-             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Expanded(
-                  child: Column(children: [
-                    const Text(
-                      "Humidity",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+          
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: Column(children: [
+                  const Text(
+                    "Humidity",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "${weatherModel?.main?.humidity}",
-                      style: const TextStyle(fontSize: 18),
-                    ),
-                  ]),
-                ),
-                Expanded(
-                  child: Column(children: [
-                    const Text("Pressure",
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "${weatherModel?.main?.pressure}",
-                      style: const TextStyle(fontSize: 18),
-                    ),
-                  ]),
-                ),
-                Expanded(
-                  child: Column(children: [
-                    const Text("Wind Speed",
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "${weatherModel?.wind?.speed}",
-                      style: const TextStyle(fontSize: 18),
-                    ),
-                  ]),
-                )
-              ],
-            ),
-        //  )
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "${weatherModel?.main?.humidity}",
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ]),
+              ),
+              Expanded(
+                child: Column(children: [
+                  const Text("Pressure",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "${weatherModel?.main?.pressure}",
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ]),
+              ),
+              Expanded(
+                child: Column(children: [
+                  const Text("Wind Speed",
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "${weatherModel?.wind?.speed}",
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                ]),
+              )
+            ],
+          ),
+          //  )
         ],
       ),
     );
